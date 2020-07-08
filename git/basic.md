@@ -115,7 +115,7 @@ $ git push origin master
 
 
 
-#### git pull : GitHub에서 최근 Commit 불러오기
+#### git pull : GitHub에서 처리되지 않은 Commit 불러오기
 
 - git pull origin master
 
@@ -125,7 +125,7 @@ $ git pull origin master
 
 
 
-#### git clone : GitHub에서 프로젝트 복제 
+#### git clone : GitHub에서 프로젝트 복제 (1회만)
 
 - git clone origin
 
