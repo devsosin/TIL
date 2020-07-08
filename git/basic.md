@@ -125,7 +125,7 @@ $ git pull origin master
 
 
 
-#### git clone : GitHub에서 복제 
+#### git clone : GitHub에서 프로젝트 복제 
 
 - git clone origin
 
