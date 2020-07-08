@@ -4,7 +4,20 @@ Git 기본 명령어
 
 
 
-### ㅇ 로컬 저장소
+### ㅇ 로컬 저장소 My Computer
+
+### git init
+
+현재 WD를 git으로 관리하겠다 선언
+
+※ 프로젝트 단위로 git init 하는 것이 좋다 (상위에서 다시 git init 하는 경우는 없어야함.)
+repository 별로 하나씩 추가
+
+``` shell
+$ git init
+```
+
+
 
 #### git add 파일 or .(현재 폴더)
 
@@ -47,11 +60,27 @@ $ git status
 
 
 
-### ㅇ GitHub
+#### git reset
 
-#### git remote add origin : 주소 설정 
+- git reset HEAD . : add 취소
+- git reset --option HEAD^ : commit 취소
+  - --soft : add 상태로 전환
+  - --mixed : WD에 보존
+  - --hard : WD에서 삭제
+  - HEAD~number : number 만큼 commit 취소
 
-- git remote add origin 주소
+```shell
+$ git reset HEAD
+$ git reset --soft HEAD^
+```
+
+
+
+### ㅇ 원격저장소 GitHub
+
+#### git remote : GitHub에 연결 
+
+- add origin 주소 : GitHub 주소 설정
   - repository (.git 추가)
 
 ``` shell
@@ -60,9 +89,7 @@ $ git remote add origin 주소.git
 
 
 
-#### origin 초기화
-
-- git remote remove origin
+- remove origin : GitHub 주소 초기화
 
 ``` shell
 $ git remote remove origin
@@ -70,10 +97,7 @@ $ git remote remove origin
 
 
 
-#### git remote -v
-
-- git remote
-  - -v : origin 확인
+- -v  origin 확인
 
 ``` shell
 $ git remote -v
@@ -81,7 +105,7 @@ $ git remote -v
 
 
 
-#### git push origin master
+#### git push : GitHub에 등록
 
 - git push origin master
 
@@ -91,17 +115,21 @@ $ git push origin master
 
 
 
-#### git reset
+#### git pull : GitHub에서 최근 Commit 불러오기
 
-- git reset HEAD . : add 취소
-- git reset --option HEAD^ : commit 취소
-  - --soft : add 상태로 전환
-  - --mixed : 기본 상태로 전환 (WD에 보존)
-  - --hard : WD에서 삭제
-  - HEAD~number : number 만큼 취소
+- git pull origin master
 
-```shell
-$ git reset HEAD
-$ git reset --soft HEAD^
+``` shell
+$ git pull origin master
+```
+
+
+
+#### git clone : GitHub에서 복제 
+
+- git clone origin
+
+``` shell
+$ git clone origin
 ```
 
