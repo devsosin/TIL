@@ -133,3 +133,34 @@ $ git pull origin master
 $ git clone origin
 ```
 
+
+
+#### git branch: 협업 프로젝트용 branch 생성
+
+- git branch <name>
+
+``` shell
+$ git branch sosin
+```
+
+
+
+#### git checkout: 협업 프로젝트용 branch 전환
+
+- git checkout <branch>
+- git checkout -b <branch> 생성도 함께 진행
+
+``` shell
+$ git checkout sosin(master)
+```
+
+
+
+#### git merge: 협업 프로젝트용 commit 병합 (master에서 merge)
+
+- git merge <commit code>
+
+``` shell
+$ git merge 6d6a6932ce4cfd18d48cfd5c3fa3cbd4546202bf
+```
+
