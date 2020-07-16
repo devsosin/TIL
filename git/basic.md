@@ -164,3 +164,23 @@ $ git checkout sosin(master)
 $ git merge 6d6a6932ce4cfd18d48cfd5c3fa3cbd4546202bf
 ```
 
+
+
+#### git fetch: 강제 버전 맞추기 1
+
+- git fetch --all
+
+``` shell
+$ git fetch --all
+```
+
+
+
+#### git reset: 강제 버전 맞추기 2
+
+- git reset --hard master
+
+``` shell
+$ git reset --hard master
+```
+
