@@ -125,9 +125,16 @@ $ git pull origin master
 
 
 
+
+
+## GitHub Cooperation Method
+
+#### 협엽프로젝트 진행 시 깃허브 기반 프로젝트 관리 방법
+
+
 #### git clone : GitHub에서 프로젝트 복제 (1회만)
 
-- git clone origin
+- git clone <origin>
 
 ``` shell
 $ git clone origin
@@ -135,7 +142,7 @@ $ git clone origin
 
 
 
-#### git branch: 협업 프로젝트용 branch 생성
+#### git branch: 협업 프로젝트용 branch 생성 (임시 add, commit용)
 
 - git branch <name>
 
@@ -145,7 +152,7 @@ $ git branch sosin
 
 
 
-#### git checkout: 협업 프로젝트용 branch 전환
+#### git checkout: 협업 프로젝트 branch로 전환 (임시 add, commit)
 
 - git checkout <branch>
 - git checkout -b <branch> 생성도 함께 진행
@@ -156,13 +163,9 @@ $ git checkout sosin(master)
 
 
 
-#### git merge: 협업 프로젝트용 commit 병합 (master에서 merge)
+##### 개인 프로젝트 진행하듯이 동일하게 add, commit 작업
 
-- git merge <commit code>
-
-``` shell
-$ git merge 6d6a6932ce4cfd18d48cfd5c3fa3cbd4546202bf
-```
+##### branch master로 전환
 
 
 
@@ -184,3 +187,16 @@ $ git fetch --all
 $ git reset --hard master
 ```
 
+
+
+#### git merge: 협업 프로젝트 commit 병합 
+
+- git merge <commit code> (branch의 git status에서 git log 확인하여 복사)
+
+``` shell
+$ git merge 6d6a6932ce4cfd18d48cfd5c3fa3cbd4546202bf
+```
+
+
+
+##### push origin하면 원격저장소에 업로드
